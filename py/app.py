@@ -1,10 +1,14 @@
 from chatterbot import ChatBot
 from chatbot import chatbot
 from flask import Flask, render_template, request
+from flask_cors import CORS
+from chat import get_response
 
 app = Flask(__name__)
 app.static_folder = 'static'
+CORS(app)
 
+@app.post("/predict")
 @app.route("/")
 def home():
     return render_template("index.html")

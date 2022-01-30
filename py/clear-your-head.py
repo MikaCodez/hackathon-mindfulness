@@ -3,9 +3,9 @@ import nltk
 import string
 import random
 import os
-import discord
 
-client = discord.Client()
+
+client = app.py()
 
 sad_words = ["sad", "depressed", "unhappy", "angry", "miserable"]
 
