@@ -22,14 +22,30 @@
 body {
     background-color: var(--bodyBackground);
     font-family: 'Dosis', sans-serif;
+    font-size:20px;
     
 }
 h2 {
+    font-size: 50px;
     margin: 50px;
 }
 
 h2, h4, p {
     text-align: center;
+}
+
+.content-container {
+    text-align: center;
+    background-color: #EDF6F9;
+    padding: 25px;
+    border-radius: 7px;
+    margin: 20px 0;
+}
+
+/* about page */
+
+.resource-links {
+    text-align: left;
 }
 
 /* my daily lift */
@@ -44,10 +60,13 @@ h2, h4, p {
 }
 
 .card {
-    height: 200px;
+    height: 250px;
     margin: 30px 0;
     text-align: center;
+}
 
+.card-title {
+    color:#006D77;
 }
 
 .form-check-input:checked {
@@ -60,9 +79,22 @@ h2, h4, p {
     box-shadow: 0 0 0 0.25rem #83c5be;
 }
 
+.modal-title {
+    margin: 0 auto;
+}
+
+.modal-header .btn-close {
+    padding: 0;
+    margin: 0;
+}
+
+#reload {
+    margin: 15px;
+}
+
 @media screen and (min-width: 426px) and (max-width: 768px) {
     .card {
-        height: 250px;
+        height: 300px;
     }
     
 }
@@ -81,16 +113,81 @@ h2, h4, p {
     height: 50px;
 }
 
- .form-floating {
-    margin: 20px;
+.form-floating {
+    margin: 10px;
+    padding: 10px;
     width: 60%;
     height: 40%;
     border-radius: 20px;
+}
+
+#floatingTextarea2 {
+    height: 300px;
+    border: none;
+    background-color: #fff;
+    padding: 20px;
+}
+
+#clear-btn {
+    width: 30%;
+    height: 50px;
+    padding: 5px;
+    background-color: #8E7DBE;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+
+ #clear-btn:hover {
+    background-color: #59516d;
  }
 
- #clear-btn {
-     margin-bottom: 30px;
- }
+.timer-container {
+    padding: 10px;
+    margin-top: 30px;
+    width: 60%;
+    height: 40%;
+    border: 2px solid #006D77;
+    border-radius: 10px;
+}
+
+.timer-title-heading {
+    margin: 20px;
+    color: #006D77;
+}
+
+.timer-audio-btn {
+    background-color: #C1E2DE;
+    color: #006D77;
+    border: 1px solid #006D77;
+    border-radius: 20px;
+    text-align: center;
+    margin-right:10px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 100px;
+    padding: 5px;
+}
+
+.timer-audio-btn:hover{
+    background-color: #006D77;
+    color: #C1E2DE;
+}
+
+.audio-field {
+    margin-top: 20px;
+}
+
+.fa-comment {
+    padding-left:10px;
+}
+
+.fa-clock {
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 
 /* Home Page (Rob) */ 
@@ -107,11 +204,6 @@ nav{
     padding:0 10px;
 }
 
-#mind-hackers-logo{
-    width: 40px;
-    height: auto;
-    margin-left: 10px;
-}
 
 nav > ul {
     margin: 0;
@@ -136,37 +228,42 @@ nav > ul {
 }
 
 .menu a:hover{
-    background-color:var(--positiveSloganBackground);
+    color:#006D77;
+    /* background-color:var(--positiveSloganBackground); */
 }
 
 .home-hero-outer{
     position: relative;
 }
 
-.positive-slogan{
-    position: absolute;  
-    left: 50%;
-    top: 10%;       
-    transform: translate(-50%, -50%);
-
-    white-space: nowrap;
-    color: var(--positiveSlogan);
-    /* font-weight: 200; */
-    background-color: var(--positiveSloganBackground);
-    padding: 5px;
-    font-size: 2.5rem;
-    margin: 8px;
-}
-
 .home-hero-image{
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
 }
 
 .dropdown-menu-nav{
     display: none;
 }
+
+@media screen and (min-width: 1024px) {
+    .home-hero-image {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .home-hero-image {
+        height: 400px;
+    }
+}
+
+@media screen and  (min-width: 2560px) {
+    .home-hero-image {
+        height: 600px;
+    }
+}
+
 
 /* Footer */
 footer{
